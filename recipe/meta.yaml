@@ -1,5 +1,5 @@
 {% set name = "pyCHX" %}
-{% set version = "4.0.10" %}
+{% set version = "4.0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbd5a69119b2b32371edf5363583f3c92933aa7660360543638d6c6ede130228
+  sha256: 29b7dae9cedc42442be74f8515a135ecfa5ddf761bcd043cc7ab6d67f9a6590f
 
 build:
   number: 0

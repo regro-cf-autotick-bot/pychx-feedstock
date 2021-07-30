@@ -20,21 +20,25 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - cython
-    - dask
     - databroker
     - dill
+    - eiger-io
+    - h5py
+    - historydict
     - ipython
     - lmfit
     - matplotlib-base
+    - modestimage
     - numpy
     - pandas
     - pillow
-    - pyyaml
+    - pims
+    - pytz
     - reportlab
+    - scikit-beam
+    - scikit-image
     - scipy
-    - theano
-    - tifffile
+    - six
     - tqdm
     - xray-vision
 

@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 66beb3fc79907706f7785ec8a3f4ac5576656e3e910425812e00a61f15c7f688
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - databroker
     - dill
     - eiger-io
@@ -43,6 +43,8 @@ requirements:
     - xray-vision
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyCHX
     - pyCHX.v2
